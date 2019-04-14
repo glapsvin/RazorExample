@@ -1,0 +1,74 @@
+﻿@model RazorExample.Models.Person
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">
+                    Add New Person (Tag) <br />
+                    <small>Please enter information for the new person.</small>
+                </h3>
+            </div>
+        </div>
+        <form id="full-page-form" asp-action="NewPersonTag" asp-controller="Person" method="post">
+          
+                <div class="row">
+                    <div class="col-md-6">
+                        <div asp-validation-summary="All"></div>
+                        <div class="form-group">
+                            <label asp-for="FirstName" class="col-xs-12">First Name</label>
+                            <div class="col-xs-9"><input asp-for="FirstName" class="form-control" /></div>
+                            <span asp-validation-for="FirstName"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="LastName" class="col-xs-12">Last Name</label>
+                            <div class="col-xs-9"><input asp-for="LastName" class="form-control" /></div>
+                            <span asp-validation-for="LastName"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Organization" class="col-xs-12">Organization</label>
+                            <div class="col-xs-9"><input asp-for="Organization" class="form-control" /></div>
+                            <span asp-validation-for="Organization"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Phone" class="col-xs-12">Phone</label>
+                            <div class="col-xs-9"><input asp-for="Phone" class="form-control" /></div>
+                            <span asp-validation-for="Phone"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="col-xs-12">Email</label>
+                            <div class="col-xs-9"><input asp-for="Email" class="form-control" /></div>
+                            <span asp-validation-for="Email"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Address</h3>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label asp-for="HomeAddress.Street" class="col-xs-12">Street</label>
+                                <div class="col-xs-9"><input asp-for="HomeAddress.Street" class="form-control" /></div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label asp-for="HomeAddress.City" class="col-xs-12">City</label>
+                                <div class="col-xs-9"><input asp-for="HomeAddress.City" class="form-control" /></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label asp-for="HomeAddress.State" class="col-xs-12">State</label>
+                                <div class="col-xs-9"><input asp-for="HomeAddress.State" class="form-control" /></div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label asp-for="HomeAddress.Zip" class="col-xs-12">Zip</label>
+                                <div class="col-xs-9"><input asp-for="HomeAddress.Zip" class="form-control" /></div>
+                            </div>
+                        </div>
+                        <input type="submit" class="pull-right btn btn-primary" />
+                    </div>
+                </div>
+            </form>
+          
